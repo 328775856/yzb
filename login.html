@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/weui.css"/>
+    <script src="js/zepto.min.js"></script>
+    <style type="text/css">
+        @media only screen and (max-width:320px){
+            #ft{
+                font-size:13px;
+            }
+            img{
+                width: 295px;
+                height: 150px;
+            }
+        }
+        @media only screen and (min-width:414px){
+            img{
+                width: 385px;
+                height: 315px;
+            }
+        }
+    </style>
+</head>
+<body ontouchstart>
+    <div class="weui_cells" style="margin: 0;padding: 0;">
+    <div class="weui_cell"><img src="images/logo_last3.jpg"  alt="" style="margin: 0;padding: 0;"></div>
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>游中宝注册</p>
+            </div>
+            <div class="weui_cell_ft" id="ft">此页面用于游中宝客户注册</div>
+        </div>
+    </div>
+   <!--  <div class="weui_cells weui_cells_access">
+        <a href="http://www.baidu.com" class="weui_cell">
+            <div class="weui_cess_hd">
+                <img src="images/gwc.jpg" alt="" style="width: 20px;margin-right:5px;display:block;">
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>带图标、说明、跳转的列表项</p>
+            </div>
+            <div class="weui_cell_ft">说明文字</div>
+        </a>
+        <a href="http://www.sina.com" class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>说明、跳转的列表项</p>
+            </div>
+            <div class="weui_cell_ft">说明文字</div>
+        </a>
+    </div>
+    <div class="weui_cells weui_cells_radio">
+        <label for="x11" class="weui_cell weui_check_label">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>单项列表项1</p>
+            </div>
+            <div class="weui_cell_ft">
+                <input type="radio" class="weui_check" name="radio1" id="x11">
+                <span class="weui_icon_checked"></span>
+            </div>
+        </label>
+        <label for="x12" class="weui_cell weui_check_label">
+            <div class="weui_cell_bd weui_cell_primary">
+                <p>单选列表项2</p>
+            </div>
+            <div class="weui_cell_ft">
+                <input type="radio" name="radio1" id="x12" class="weui_check" checked="checked" />
+                <span class="weui_icon_checked"></span>
+            </div>
+        </label>
+        <div class="weui_cells weui_cells_checkbox">
+            <label class="weui_cell weui_cell_check_label" for="s11">
+                <div class="weui_cell_hd">
+                    <input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked" />
+                    <i class="weui_icon_checked"></i>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>复选列表项1</p>
+                </div>
+            </label>
+        </div> -->
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+                <div class="weui_hd">
+                    <label for="" class="weui_label">姓名</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input type="text" class="weui_input" pattern="" placeholder="请输入用户名" style="margin-left: 0.3em;">
+                </div>
+            </div>  
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">密码</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input type="password" class="weui_input" pattern="" placeholder="请输入密码" />
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label class="weui_label">qq</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="tel" pattern="[0-9]*" placeholder="请输入qq号码" />
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">邮箱</label>
+                </div>
+                <div class="weui_cell_bd">
+                    <input type="text" class="weui_input" pattern="^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$" placeholder="请输入邮箱" />
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd">
+                    <label>手机号</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="tel" pattern="((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\d{8}" placeholder="请输入手机号" maxlength="11" />
+                </div>
+            </div>  
+        </div>
+    </div>
+    <a href="" class="weui_btn weui_btn_primary" onclick="formSubmit()">确定</a>
+        <br />
+    <div class="bd spacing">
+    <a href="javascript:;" class="weui_btn weui_btn_primary" id="showActionSheet">点击上拉ActionSheet</a>
+</div>
+<div id="actionSheet_wrap">
+    <div class="weui_mask_transition" id="mask"></div>
+    <div class="weui_actionsheet" id="weui_actionsheet">
+        <div class="weui_actionsheet_menu">
+            <div id="actionsheet1" class="weui_actionsheet_cell">示例菜单1</div>
+            <div id="actionsheet2" class="weui_actionsheet_cell">示例菜单2</div>
+            <div id="actionsheet3" class="weui_actionsheet_cell">示例菜单3</div>
+            <div id="actionsheet4" class="weui_actionsheet_cell">示例菜单4</div>
+        </div>
+        <div class="weui_actionsheet_action">
+            <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+
+$("#showActionSheet").click(function(){
+    var mask = $("#mask");
+    var weuiActionsheet = $("#weui_actionsheet");
+    mask.show().addClass('weui_fade_toggle').click(function(){
+        hideActionSheet(weuiActionsheet, mask);
+    });
+    $("#actionsheet_cancel").click(function(){
+        hideActionSheet(weuiActionsheet, mask);
+    });
+    $("#actionsheet1").add($("#actionsheet2")).add($("#actionsheet3")).add($("#actionsheet4")).unbind("click");
+    $("#actionsheet1").click(function(){
+        alert("点击了示例菜单1");
+        hideActionSheet(weuiActionsheet, mask);
+    });
+    $("#actionsheet2").click(function(){
+        alert("点击了示例菜单2");
+        hideActionSheet(weuiActionsheet, mask);
+    });
+    $("#actionsheet3").click(function(){
+        alert("点击了示例菜单3");
+        hideActionSheet(weuiActionsheet, mask);
+    });
+    $("#actionsheet4").click(function(){
+        alert("点击了示例菜单4");
+        hideActionSheet(weuiActionsheet, mask);
+    });
+    weuiActionsheet.addClass('weui_actionsheet_toggle');
+    weuiActionsheet.unbind('transitionend').unbind('webkitTransitionEnd');
+
+    var hideActionSheet = function(weuiActionsheet, mask){
+        weuiActionsheet.removeClass("weui_actionsheet_toggle");
+        mask.removeClass("weui_fade_toggle");
+        weuiActionsheet.on('transitionend', function() {
+            mask.hide();
+        }).on('webkitTransitionEnd',
+        function() {
+            mask.hide();
+        });
+    }
+});
+function formSubmit(){
+    
+}
+    
+})
+</script>
+</body>
+
+
+</html>
