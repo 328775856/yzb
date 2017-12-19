@@ -7,27 +7,42 @@
     <link rel="stylesheet" href="css/weui.css"/>
     <script src="js/jquery-3.2.1.min.js"></script>
     <style type="text/css">
+        h3{
+            text-align: center;
+        }
         .parent{
             display: flex;
             flex-flow: row wrap;
-            height: 100px;
         }
         .child{
             flex: 0 0 10%;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             box-sizing: border-box;
             text-align: center;
             cursor: pointer;
+            background: #E0FFFF;
+            color: #7A8B8B;
+        }
+        @media only screen and (max-width: 414px) {
+        .child{
+                flex: 0 0 20%;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                text-align: center;
+                cursor: pointer;
+             }
         }
         .child:hover{
-    
-          border:1px red solid;
+          background: #7EC0EE;
+          color: white;
+          transform: scale(1.1,1.1);
+           -webkit-box-shadow: #666 0px 0px 10px;  
+           -moz-box-shadow: #666 0px 0px 10px;  
+           box-shadow: #666 0px 0px 10px; 
         }  
         .checked{
-            background: lightblue;
-        }  
-        .nochecked{
-            background: white;
+            background: #5CACEE;
+            color: white;
         }      
     </style>
 </head>    
@@ -87,31 +102,72 @@
             <div class="child"></div>
             <div class="child"></div>
         </div>
+            <a class="weui_btn weui_btn_primary" id="qr">提交</a>  
+            <div id="Dialog" class="weui_dialog_confirm">
+                <div class="weui_mask"></div>
+                <div class="weui_dialog">
+                    <div class="weui_dialog_hd">
+                        <strong class="weui_dialog_title">您选中的设备如下</strong>
+                    </div>
+                    <div class="weui_dialog_bd" id="show_content">自定义弹窗内容</div>
+                    <div class="weui_dialog_ft">
+                        <a href="" name="no" class="weui_btn_dialog default">取消</a> 
+                        <a href="" name="yes" class="weui_btn_dialog primary">确定</a>
+                    </div>
+                </div>
+            </div>    
+            <script type="text/javascript">
+            $(function(){
+                $("#Dialog").hide();
+            })
+            </script>  
     <script type="text/javascript">
         $(function(e){
-          
+          var str='';
           //  $(".parent").css('height',screenWidth/2+'px');
-        function startAll(){
-            $(window).resize(function(){
+
+                //初始化选座框的宽高
               var screenWidth=$(document.body).width();
-              $(".parent").css('height',screenWidth/2+'px');
-              $(".parent").css('line-height',screenWidth/10+'px');
-        });
-        for(x in $(".parent div")){
-            $(".parent div").eq(x).html(parseInt(x)+1);
-        };
-        }
-        startAll();
+             // alert(screenWidth)
+              if(screenWidth<=414){
+                $(".child").css('height',screenWidth/7+'px');
+                $(".child").css('line-height',screenWidth/7+'px');
+              }else{
+                $(".child").css('height',screenWidth/10+'px');
+                $(".child").css('line-height',screenWidth/10+'px');
+              }
+              
+
+                //编号所有选座框
+            for(x in $(".parent div")){
+                $(".parent div").eq(x).html(parseInt(x)+1);
+            };
+
+                //选座框的选中效果及提交数据‘checked’
          $(".parent div").click(function(){
            // alert($(this).attr("class"))
                 if($(this).attr("class")!='child'){
                     $(this).removeClass("checked");
                 }else{
                     $(this).addClass("checked");
-                    alert($(this).index())
                 }
-            })
- 
+            });
+         $('#qr').click(function(){
+
+            str='';
+            if($('.checked').length==0){
+                alert('您还未选择设备');
+            }else{
+               
+            for(var i=0;i<$('.checked').length;i++){
+               str+= $('.checked').eq(i).html()+'号,'; 
+            }
+            str=str.substring(0,str.length-1);
+            $('#show_content').html('您选中了'+str+'设备');
+            $('#Dialog').show();
+
+        };
+         })
      
 });
     </script>   
