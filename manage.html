@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-0scalable=0,viewport-fit=cover">
+	<title>管理页面</title>
+	<link rel="stylesheet" type="text/css" href="css/new_weui.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
+	<style type="text/css">
+		h1{
+			text-align: center;
+			margin-top: 30px;
+		}
+		.gray{
+			color: gray;
+		}
+		a:hover{
+			background: #ddd;
+		}
+		.pointer{
+			cursor:pointer;
+		}
+		.weui-navbar + .weui-tab__panel+.weui-tab__panel{
+		  padding-top:50px;
+		  padding-bottom:0;
+		}
+		.weui-navbar + .weui-tab__panel+.weui-tab__panel+.weui-tab__panel{
+		  padding-top:50px;
+		  padding-bottom:0;
+		}
+		.green{
+			color: green;
+		}
+		.red{
+			color: red;
+		}
+		.blue{
+			color: blue;
+		}
+		.orange{
+			color: orange;
+		}
+		.silve{
+			color: #c0c0c0;
+		}
+		.black{
+			color: black;
+		}
+		.gold{
+			color:gold;
+		}
+	</style>
+</head>
+<body ontouchstart>
+	<div class="weui-tab">
+		<div class="weui-navbar">
+			<div class="weui-navbar__item weui-bar__item_on pointer">游客界面</div>
+			<div class="weui-navbar__item pointer">导游界面</div>
+			<div class="weui-navbar__item pointer">代理界面</div>
+		</div>
+		<div class="weui-tab__panel" id="panel1">
+				<div class="weui-grids">
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-plane fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">飞机</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-bus fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">汽车</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-train fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">火车</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-shopping-bag fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">购物</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-cny fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">选座支付</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-microphone fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">语音</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-comments fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">联系客服</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-user fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">个人中心</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-cogs fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">设置</P>
+					</a>
+			</div>
+		</div>
+		<div class="weui-tab__panel" id="panel2">
+			<div class="weui-grids">
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-address-book-o fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">点名</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-audio-description fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">解说</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-microphone fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">语音</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-rss fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">电子围栏</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-cny fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">选座支付</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-wrench fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">设备状态</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-comments fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">联系客服</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-user fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">个人中心</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-cogs fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">设置</P>
+					</a>
+			</div>
+		</div>
+		<div class="weui-tab__panel" id="panel3">
+			<div class="weui-grids">
+					<a href="javascript:;" class="weui-grid" id="open">
+						<div class="weui-grid__icon">
+							<i class="fa fa-spinner fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">打开设备</P>
+					</a>
+					<a href="javascript:;" class="weui-grid" id="close">
+						<div class="weui-grid__icon">
+							<i class="fa fa-close fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">关闭设备</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-microphone fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">语音</P>
+					</a>
+					<a href="javascript:;" class="weui-grid"> 
+						<div class="weui-grid__icon">
+							<i class="fa fa-plane fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">飞机</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-bus fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">汽车</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-train fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">火车</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-comments fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">联系客服</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-user fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">个人中心</P>
+					</a>
+					<a href="javascript:;" class="weui-grid">
+						<div class="weui-grid__icon">
+							<i class="fa fa-cogs fa-2x gray"></i>
+						</div>
+						<P class="weui-grid__label">设置</P>
+					</a>
+			</div>
+		</div>
+	</div>
+	<div class="weui-tabbar">
+		<a href="" class="weui-tabbar__item weui-bar__item_on">
+			<span>
+				<i class="fa fa-plane weui-tabbar__icon"></i>
+		<!-- 		<span class="weui-badge">
+				</span> -->
+			</span>
+			<p class="weui-tabbar__label">微信</p>
+		</a>
+		<a href="" class="weui-tabbar__item weui-bar__item_on">
+			<span>
+				<img src="images/gwc.jpg" alt="" class="weui-tabbar__icon">
+	<!-- 			<span class="weui-badge"></span>
+			</span> -->
+			<p class="weui-tabbar__label">通讯录</p>
+		</a>
+		<a href="" class="weui-tabbar__item weui-bar__item_on">
+			<span>
+				<img src="images/gwc.jpg" alt="" class="weui-tabbar__icon">
+	<!-- 			<span class="weui-badge"></span>
+			</span> -->
+			<p class="weui-tabbar__label">发现</p>
+		</a>
+		<a href="" class="weui-tabbar__item">
+			<img src="images/gwc.jpg" alt="" class="weui-tabbar__icon">
+			<p class="weui-tabbar__label">我</p>
+		</a>
+	</div>
+	<script type="text/javascript" src="js/zepto.js"></script>
+	<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/weui.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			//panel切换
+			$('.weui-tab__panel').eq(0).show().siblings('.weui-tab__panel').hide();
+			$('.weui-navbar__item').on("click",function(){
+			$(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+			var $index=$(this).index();
+			$('.weui-tab__panel').eq($index).show().siblings('.weui-tab__panel').hide();
+			switch($index){
+				case 0:
+				changeColor(color,'#panel1');
+				break;
+				case 1:
+				changeColor(color2,'#panel2');
+				break;
+				case 2:
+				changeColor(color3,'#panel3');
+				break;
+			}
+			});
+			//网址数组
+			var https=[
+						[
+						'http://www.baidu.com',
+						'http://www.sina.com',
+						'http://www.sohu.com',
+						'',
+						'./scan.html',
+						],
+						[
+						'http://www.qq.com',
+						'',
+						'',
+						'',
+						'./scan.html',
+						],
+						[
+						,
+						'',
+						]
+					];
+			var color=['green','red','blue','silve','gold','red','green','silve','black'];
+			var color2=['green','red','blue','silve','green','red','green','silve','black'];
+			var color3=['green','red','blue','silve','green','red','green','silve','black'];		
+			$('.weui-tab__panel a').click(function(){
+				var $index2=$(this).parent().parent().index();
+				//alert($index2)
+				var $index=$(this).index();
+				$(this).attr('href',https[$index2-1][$index]);
+
+			});
+			//根据当前悬浮改变样式
+			
+			function changeColor(num,index){
+				var arr=num;
+				$(index).find('a').hover(function(){
+					$(this).find('i').addClass(arr[parseInt($(this).index())])
+				},
+				function(){
+				$(this).find('i').removeClass(arr[parseInt($(this).index())])
+			});
+			};			
+			changeColor(color,'#panel1');
+
+		})
+	</script>
+</body>
+</html>

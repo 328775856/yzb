@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+   <head> 
     <title>WeUI</title>
     <link rel="stylesheet" href="css/new_weui.css"/>
     <link rel="stylesheet" href="css/login.css"/>
-        <script src="js/zepto.js"></script>
-</head>
+     <script src="js/zepto.js"></script>
+   </head>  
 <body ontouchstart>
 	<div class="flex container">
 		<header class="flex-item flex">
 			<h2>游中宝登陆系统</h2>
 		</header>
 		<div class="flex-item content">
-			
+			<h1 class="flex-item " style="display: block;position: absolute;top: 320px;">Welcome</h1>
 			<form action="" method="post">
-			<h1>Welcome</h1>
+			
 				<input type="text" name="username" placeholder="用户名" id="username">
 				<input type="password" name="userpwd" placeholder="密码" id="userpwd">
-				<button id=tj>提交</button>
+				<button id='tj'>提交</button>
 			</form>
 		</div>
 		<footer class="flex-item "><ul class="bg-bubbles">
@@ -35,6 +36,14 @@
 			<li></li>
 		</ul></footer>
 	</div>	
+	<script>
+$('#tj').click(function (event) {
+	event.preventDefault();
+	$('form').fadeOut(500);
+	$('.content').addClass('form-success');
+	$.ajax('login.php');  
+});
+</script>
 <script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/weui.min.js"></script>
 </body>
