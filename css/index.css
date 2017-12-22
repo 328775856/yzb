@@ -55,3 +55,8 @@
 		.bgorange{
 			background: white;
 		}
+.img{
+	background-repeat: no-repeat;
+	height: 300px;
+	background-size: 100% 100%;
+}

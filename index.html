@@ -2,15 +2,12 @@
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,user-0scalable=0,viewport-fit=cover">
-	<title>管理页面</title>
+	<meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport">
+	<title>厦门游中宝欢迎您！</title>
 	<link rel="stylesheet" type="text/css" href="css/new_weui.css">
 	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/index.css">
-	<style type="text/css">
-	
-	</style>
 </head>
 <body ontouchstart>
 <!-- head -->
@@ -19,16 +16,15 @@
 		<div class="weui-navbar">
 			<div class="weui-navbar__item weui-bar__item_on pointer">特色小吃</div>
 			<div class="weui-navbar__item pointer">一日游</div>
-			<div class="weui-navbar__item pointer">33</div>
+			<div class="weui-navbar__item pointer">当地特产</div>
 		</div>
+<!-- 图片轮播 -->			
 		<div class="swiper-container" style="padding-top:50px;overflow: hidden;">
 			  <div class="swiper-wrapper weui-flex">
-			    <div class="swiper-slide weui-flex__items weui-flex" style="background: url(images/1.jpg);background-repeat: no-repeat;height: 300px;background-size: 100% 100%;">
-					<p style="text-align: center;" class="weui-flex__items">Hello world!</p>
-			    </div>
-			    <div class="swiper-slide weui-flex__items " style="background: url(images/2.jpg);background-repeat: no-repeat;height: 300px;background-size: 100% 100%;"></div>
-			    <div class="swiper-slide weui-flex__items " style="background: url(images/3.jpg);background-repeat: no-repeat;height: 300px;background-size: 100% 100%;"></div>
-			  </div>
+			    <div class="swiper-slide weui-flex__items img"></div>
+			    <div class="swiper-slide weui-flex__items img"></div>
+			    <div class="swiper-slide weui-flex__items img"></div>
+			  </div
 			  <div class="swiper-pagination"></div>
 		</div>
 		<div class="weui-search-bar" id="searchBar">
@@ -284,40 +280,17 @@
 			$('.weui-tab__panel').eq($index).show().siblings('.weui-tab__panel').hide();
 			switch($index){
 				case 0:
-				changeColor(color,'#panel1');
+				changeImg(img)
 				break;
 				case 1:
-				changeColor(color2,'#panel2');
+				changeImg(img2);
 				break;
 				case 2:
-				changeColor(color3,'#panel3');
+				changeImg(img3);
 				break;
 			}
 			});
-			//网址数组
-			var https=[
-						[
-						'http://www.baidu.com',
-						'http://www.sina.com',
-						'http://www.sohu.com',
-						'',
-						'./scan.html',
-						],
-						[
-						'http://www.qq.com',
-						'',
-						'',
-						'',
-						'./scan.html',
-						],
-						[
-						,
-						'',
-						]
-					];
-			var color=['silve','car','train','buy','gold','blue','green','lightblue','black'];
-			var color2=['green','red','blue','silve','gold','red','green','lightblue','black'];
-			var color3=['green','red','blue','silve','car','train','green','lightblue','black'];		
+
 			$('.weui-tab__panel a').click(function(){
 				var $index2=$(this).parent().parent().index();
 				//alert($index2)
@@ -325,43 +298,33 @@
 				$(this).attr('href',https[$index2-1][$index]);
 
 			});
-			//根据当前悬浮改变样式
-			
-			// function changeColor(num,index){
-			// 	var arr=num;
-			// 	$(index).find('a').hover(function(){
-			// 		$(this).find('i').addClass(arr[parseInt($(this).index())])
-			// 	},
-			// 	function(){
-			// 	$(this).find('i').removeClass(arr[parseInt($(this).index())])
-			// });
-			// };			
-			//changeColor(color,'#panel1');
-			function changeImg(num,index){
+
+			//改变轮播图片
+				////图片数组
+				var img2=['1','2','3'];
+				var img3=['bing','bing2','sugar'];
+				var img=['hl','wx','br'];
+			function changeImg(num){
 				var arr=num;
-				$(index).find('a').hover(function(){
-					$(this).find('i').addClass(arr[parseInt($(this).index())])
-				},
-				function(){
-				$(this).find('i').removeClass(arr[parseInt($(this).index())])
-			});
+				for(var i=0;i<arr.length;i++){
+					$('.swiper-wrapper').find('div').eq(i).css('background-image','url(images/'+arr[i]+'.jpg)');
+				}
+				$('.swiper-wrapper').children().addClass('img');
 			};
+			changeImg(img);
 			var mySwiper = new Swiper('.swiper-container', {
-				autoplay: false,//可选选项，自动滑动
+				autoplay: true,//可选选项，自动滑动
 				pagination: {
 				    el: '.swiper-pagination',
-				    clickable :true,
+				    clickable :false,
 				},
 			});
-			mySwiper.pagination.bullets.click=function(){
-				alert(123)
-			};
-			$('.swiper-pagination-bullet').mouseout(function(){
-				mySwiper.autoplay.start();
-			}).addClass('bgorange');
-			
-
-
+			// mySwiper.el.onmouseover = function(){
+			//   mySwiper.autoplay.stop();
+			// };
+			// mySwiper.el.onmouseout = function(){
+			//   mySwiper.autoplay.start();
+			// }
 		})
 	</script>
 </body>
