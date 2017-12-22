@@ -73,12 +73,13 @@
 		</div>
 		<div class="swiper-container" style="padding-top:50px;">
 			  <div class="swiper-wrapper">
-			    <div class="swiper-slide weui-flex "><img src="images/logo_last3.jpg" alt=""></div>
-			    <div class="swiper-slide weui-flex "><img src="images/bg.jpg" alt=""></div>
-			    <div class="swiper-slide weui-flex "><img src="images/gwc.jpg" alt=""></div>
+			    <div class="swiper-slide weui-flex "><img src="images/logo_last3.jpg" width="" alt=""></div>
+			    <div class="swiper-slide weui-flex "><img src="images/bg.jpg" alt="" height="342"></div>
+			    <div class="swiper-slide weui-flex "><img src="images/logo_last2.jpg" alt=""></div>
 			  </div>
 			  <div class="swiper-pagination"></div>
 		</div>
+		<!--panel-->
 		<div class="weui-tab__panel" id="panel1">
 				<div class="weui-grids">
 					<a href="javascript:;" class="weui-grid">
@@ -254,39 +255,40 @@
 			</div>
 		</div>
 	</div>
-	<div class="weui-tabbar">
-		<a href="" class="weui-tabbar__item weui-bar__item_on">
-			<span>
-				<i class="fa fa-wechat  weui-tabbar__icon"></i>
-		<!-- 		<span class="weui-badge">
+		<!--tabbar-->
+		<div class="weui-tabbar">
+			<a href="" class="weui-tabbar__item weui-bar__item_on">
+				<span>
+					<i class="fa fa-wechat  weui-tabbar__icon"></i>
+			<!-- 		<span class="weui-badge">
+					</span> -->
+				</span>
+				<p class="weui-tabbar__label">微信</p>
+			</a>
+			<a href="" class="weui-tabbar__item weui-bar__item_on">
+				<span>
+					<i class="fa fa-address-book-o weui-tabbar__icon"></i>
+		<!-- 			<span class="weui-badge"></span>
 				</span> -->
-			</span>
-			<p class="weui-tabbar__label">微信</p>
-		</a>
-		<a href="" class="weui-tabbar__item weui-bar__item_on">
-			<span>
-				<i class="fa fa-address-book-o weui-tabbar__icon"></i>
-	<!-- 			<span class="weui-badge"></span>
-			</span> -->
-			<p class="weui-tabbar__label">通讯录</p>
-		</a>
-		<a href="" class="weui-tabbar__item weui-bar__item_on">
-			<span>
-				<i class="fa fa-dot-circle-o weui-tabbar__icon"></i>
-	<!-- 			<span class="weui-badge"></span>
-			</span> -->
-			<p class="weui-tabbar__label">发现</p>
-		</a>
-		<a href="" class="weui-tabbar__item">
-			<i class="fa fa-user-o weui-tabbar__icon"></i>
-			<p class="weui-tabbar__label">我</p>
-		</a>
-	</div>
-	<script type="text/javascript" src="js/zepto.js"></script>
-	<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
-	<script type="text/javascript" src="js/weui.min.js"></script>
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="js/swiper.min.js"></script>
+				<p class="weui-tabbar__label">通讯录</p>
+			</a>
+			<a href="" class="weui-tabbar__item weui-bar__item_on">
+				<span>
+					<i class="fa fa-dot-circle-o weui-tabbar__icon"></i>
+		<!-- 			<span class="weui-badge"></span>
+				</span> -->
+				<p class="weui-tabbar__label">发现</p>
+			</a>
+			<a href="" class="weui-tabbar__item">
+				<i class="fa fa-user-o weui-tabbar__icon"></i>
+				<p class="weui-tabbar__label">我</p>
+			</a>
+		</div>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript" src="js/weui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
 		<script type="text/javascript">
 		$(function(){
 			//panel切换
@@ -354,8 +356,17 @@
 				autoplay: true,//可选选项，自动滑动
 				pagination: {
 				    el: '.swiper-pagination',
+				    clickable :true,
 				},
+			});
+			mySwiper.pagination.bullets.click=function(){
+				alert(123)
+			};
+			$('.swiper-pagination-bullet').mouseout(function(){
+				mySwiper.autoplay.start();
 			})
+			
+
 
 		})
 	</script>

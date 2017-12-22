@@ -1,0 +1,57 @@
+	h1{
+			text-align: center;
+			margin-top: 30px;
+		}
+		.gray{
+			color: gray;
+		}
+		a:hover{
+			background: #ddd;
+		}
+		.pointer{
+			cursor:pointer;
+		}
+		.weui-navbar + .weui-tab__panel+.weui-tab__panel{
+		  padding-top:50px;
+		  padding-bottom:0;
+		}
+		.weui-navbar + .weui-tab__panel+.weui-tab__panel+.weui-tab__panel{
+		  padding-top:50px;
+		  padding-bottom:0;
+		}
+		.green{
+			color: #32CD32;
+		}
+		.red{
+			color: red;
+		}
+		.blue{
+			color: #00CED1;
+		}
+		.orange{
+			color: orange;
+		}
+		.silve{
+			color: #FCFCFC;
+		}
+		.black{
+			color: black;
+		}
+		.gold{
+			color:#EEAD0E;
+		}
+		.car{
+			color: #CD3700;
+		}
+		.train{
+			color:#006400;
+		}
+		.buy{
+			color:#CD5555;
+		}
+		.lightblue{
+			color: #836FFF;
+		}
+		.bgorange{
+			background: white;
+		}

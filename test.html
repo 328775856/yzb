@@ -1,26 +1,368 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="UTF-8">
-	<title>test</title>
-	    <script src="js/zepto.min.js"></script>
-	    <style type="text/css">
-			div{
-				width: 150px;
-				height: 80px;
-			}
-			.ex{
-				background: -moz-linear-gradient( left,#ace,#f96);
-			}
-	    </style>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-0scalable=0,viewport-fit=cover">
+	<title>管理页面</title>
+	<link rel="stylesheet" type="text/css" href="css/new_weui.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<style type="text/css">
+	
+	</style>
 </head>
-<body>
-		<form action="login.php" method="get">
-			username:<input type="text" name="username"><br><br>
-			userpwd:<input type="password" name="userpwd"><br>
-			<button type="submit">提交</button>
-			<div id="msg" class="ex">123</div>
-		</form>
+<body ontouchstart>
+<!-- head -->
+	<div class="head weui-tab">
+<!-- tab切换 -->	
+		<div class="weui-navbar">
+			<div class="weui-navbar__item weui-bar__item_on pointer">特色小吃</div>
+			<div class="weui-navbar__item pointer">一日游</div>
+			<div class="weui-navbar__item pointer">33</div>
+		</div>
+		<div class="swiper-container" style="padding-top:50px;overflow: hidden;">
+			  <div class="swiper-wrapper weui-flex">
+			    <div class="swiper-slide weui-flex__items weui-flex" style="background: url(images/1.jpg);background-repeat: no-repeat;height: 300px;background-size: 100% 100%;">
+					<p style="text-align: center;" class="weui-flex__items">Hello world!</p>
+			    </div>
+			    <div class="swiper-slide weui-flex__items " style="background: url(images/2.jpg);background-repeat: no-repeat;height: 300px;background-size: 100% 100%;"></div>
+			    <div class="swiper-slide weui-flex__items " style="background: url(images/3.jpg);background-repeat: no-repeat;height: 300px;background-size: 100% 100%;"></div>
+			  </div>
+			  <div class="swiper-pagination"></div>
+		</div>
+		<div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required/>
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                    <i class="weui-icon-search"></i>
+                    <span>搜索</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+		<!-- content panel-->
+		<div class="weui-tab__panel" id="panel1">
+        	<article class="weui-article">
+	            <h1>大标题</h1>
+	            <section>
+	                <h2 class="title">章标题</h2>
+	                <section>
+	                    <h3>1.1 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	                        consequat.
+	                    </p>
+	                    <p>
+	                        <img src="images/bg.jpg" alt="">
+	                        <img src="images/bg.jpg" alt="">
+	                    </p>
+	                </section>
+	                <section>
+	                    <h3>1.2 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                    </p>
+	                </section>
+	            </section>
+	        </article>
+	        <article class="weui-article">
+	            <h1>大标题</h1>
+	            <section>
+	                <h2 class="title">章标题</h2>
+	                <section>
+	                    <h3>1.1 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	                        consequat.
+	                    </p>
+	                    <p>
+	                        <img src="images/bg.jpg" alt="">
+	                        <img src="images/bg.jpg" alt="">
+	                    </p>
+	                </section>
+	                <section>
+	                    <h3>1.2 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                    </p>
+	                </section>
+	            </section>
+	        </article>
+	        <article class="weui-article">
+	            <h1>大标题</h1>
+	            <section>
+	                <h2 class="title">章标题</h2>
+	                <section>
+	                    <h3>1.1 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	                        consequat.
+	                    </p>
+	                    <p>
+	                        <img src="images/bg.jpg" alt="">
+	                        <img src="images/bg.jpg" alt="">
+	                    </p>
+	                </section>
+	                <section>
+	                    <h3>1.2 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                    </p>
+	                </section>
+	            </section>
+	        </article>
+	        <article class="weui-article">
+	            <h1>大标题</h1>
+	            <section>
+	                <h2 class="title">章标题</h2>
+	                <section>
+	                    <h3>1.1 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	                        consequat.
+	                    </p>
+	                    <p>
+	                        <img src="images/bg.jpg" alt="">
+	                        <img src="images/bg.jpg" alt="">
+	                    </p>
+	                </section>
+	                <section>
+	                    <h3>1.2 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                    </p>
+	                </section>
+	            </section>
+	        </article>
+		</div>
+		<div class="weui-tab__panel" id="panel2">
+			 <article class="weui-article">
+	            <h1>大标题</h1>
+	            <section>
+	                <h2 class="title">章标题</h2>
+	                <section>
+	                    <h3>1.1 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	                        consequat.
+	                    </p>
+	                    <p>
+	                        <img src="images/bg.jpg" alt="">
+	                        <img src="images/bg.jpg" alt="">
+	                    </p>
+	                </section>
+	                <section>
+	                    <h3>1.2 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                    </p>
+	                </section>
+	            </section>
+	        </article>
+		</div>
+		<div class="weui-tab__panel" id="panel3">
+			 <article class="weui-article">
+	            <h1>大标题</h1>
+	            <section>
+	                <h2 class="title">章标题</h2>
+	                <section>
+	                    <h3>1.1 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	                        consequat.
+	                    </p>
+	                    <p>
+	                        <img src="images/bg.jpg" alt="">
+	                        <img src="images/bg.jpg" alt="">
+	                    </p>
+	                </section>
+	                <section>
+	                    <h3>1.2 节标题</h3>
+	                    <p>
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	                    </p>
+	                </section>
+	            </section>
+	        </article>
+		</div>
+	</div>
+	<div class="weui-ft">
 		
+	</div>
+		<script type="text/javascript" src="js/zepto.js"></script>
+		<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript" src="js/weui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		  <script type="text/javascript">
+    $(function(){
+        var $searchBar = $('#searchBar'),
+            $searchResult = $('#searchResult'),
+            $searchText = $('#searchText'),
+            $searchInput = $('#searchInput'),
+            $searchClear = $('#searchClear'),
+            $searchCancel = $('#searchCancel');
+
+        function hideSearchResult(){
+            $searchResult.hide();
+            $searchInput.val('');
+        }
+        function cancelSearch(){
+            hideSearchResult();
+            $searchBar.removeClass('weui-search-bar_focusing');
+            $searchText.show();
+        }
+
+        $searchText.on('click', function(){
+            $searchBar.addClass('weui-search-bar_focusing');
+            $searchInput.focus();
+        });
+        $searchInput
+            .on('blur', function () {
+                if(!this.value.length) cancelSearch();
+            })
+            .on('input', function(){
+                if(this.value.length) {
+                    $searchResult.show();
+                } else {
+                    $searchResult.hide();
+                }
+            })
+        ;
+        $searchClear.on('click', function(){
+            hideSearchResult();
+            $searchInput.focus();
+        });
+        $searchCancel.on('click', function(){
+            cancelSearch();
+            $searchInput.blur();
+        });
+    });
+</script>
+		<script type="text/javascript">
+		$(function(){
+			//panel切换
+			$('.weui-tab__panel').eq(0).show().siblings('.weui-tab__panel').hide();
+			$('.weui-navbar__item').on("click",function(){
+			$(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+			var $index=$(this).index();
+			$('.weui-tab__panel').eq($index).show().siblings('.weui-tab__panel').hide();
+			switch($index){
+				case 0:
+				changeColor(color,'#panel1');
+				break;
+				case 1:
+				changeColor(color2,'#panel2');
+				break;
+				case 2:
+				changeColor(color3,'#panel3');
+				break;
+			}
+			});
+			//网址数组
+			var https=[
+						[
+						'http://www.baidu.com',
+						'http://www.sina.com',
+						'http://www.sohu.com',
+						'',
+						'./scan.html',
+						],
+						[
+						'http://www.qq.com',
+						'',
+						'',
+						'',
+						'./scan.html',
+						],
+						[
+						,
+						'',
+						]
+					];
+			var color=['silve','car','train','buy','gold','blue','green','lightblue','black'];
+			var color2=['green','red','blue','silve','gold','red','green','lightblue','black'];
+			var color3=['green','red','blue','silve','car','train','green','lightblue','black'];		
+			$('.weui-tab__panel a').click(function(){
+				var $index2=$(this).parent().parent().index();
+				//alert($index2)
+				var $index=$(this).index();
+				$(this).attr('href',https[$index2-1][$index]);
+
+			});
+			//根据当前悬浮改变样式
+			
+			// function changeColor(num,index){
+			// 	var arr=num;
+			// 	$(index).find('a').hover(function(){
+			// 		$(this).find('i').addClass(arr[parseInt($(this).index())])
+			// 	},
+			// 	function(){
+			// 	$(this).find('i').removeClass(arr[parseInt($(this).index())])
+			// });
+			// };			
+			//changeColor(color,'#panel1');
+			function changeImg(num,index){
+				var arr=num;
+				$(index).find('a').hover(function(){
+					$(this).find('i').addClass(arr[parseInt($(this).index())])
+				},
+				function(){
+				$(this).find('i').removeClass(arr[parseInt($(this).index())])
+			});
+			};
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: false,//可选选项，自动滑动
+				pagination: {
+				    el: '.swiper-pagination',
+				    clickable :true,
+				},
+			});
+			mySwiper.pagination.bullets.click=function(){
+				alert(123)
+			};
+			$('.swiper-pagination-bullet').mouseout(function(){
+				mySwiper.autoplay.start();
+			}).addClass('bgorange');
+			
+
+
+		})
+	</script>
 </body>
 </html>
