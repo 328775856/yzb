@@ -66,24 +66,19 @@
 .weui-article{
 	margin: 1px;
 	border:1px solid pink;
+	border-bottom: 0;
 }
-.weui-grid{
-	padding: 0;
-	margin: 0;
-}
-.weui-grid img{
-	padding: 0;
-	margin: 0;
-}
-.pictures{
+.example{
 	list-style: none;
 	display: flex;
 	width: 100%;
 	flex-flow: row wrap;
 }
-.pictures li{
-  float:left;
-  padding:20px 10px;
+.example li{
   width:33.33333333%;
   box-sizing:border-box;
+}
+.example img{
+	margin: 0;
+	padding: 0;
 }
