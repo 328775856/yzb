@@ -69,8 +69,9 @@
 	Zoomify.prototype.zoom = function () {
 		if (this._zooming) return;
 		
-		if (this._zoomed) this.zoomOut();
-		else this.zoomIn();
+		if (this._zoomed) {this.zoomOut();
+		$('.weui-navbar,.swiper-container,.weui-search-bar').css('position','relative');}
+		else {this.zoomIn();$('.weui-navbar,.swiper-container,.weui-search-bar').css('position','absolute');}
 	};
 	Zoomify.prototype.zoomIn = function () {
 		var that      = this,
