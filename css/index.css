@@ -82,3 +82,11 @@
 	margin: 0;
 	padding: 0;
 }
+#panel3{
+	display: flex;
+	flex-flow: row wrap;
+}
+#panel3 div{
+	width: 49%;
+	border: 1px solid black;
+}
