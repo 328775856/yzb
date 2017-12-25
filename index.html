@@ -122,7 +122,7 @@
 <script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/weui.min.js"></script>
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/swiper.js"></script>
 <script src="js/zoomify.js"></script>
 <script type="text/javascript">
     $(function(){
@@ -181,11 +181,10 @@
             switch($index){
                 case 0:
                 changeImg(img);
-                
                 break;
                 case 1:
                 changeImg(img2);
-                swiperStart()
+
                 break;
                 case 2:
                 changeImg(img3);
@@ -198,7 +197,7 @@
                 var $index2=$(this).parent().parent().index();
                 //alert($index2)
                 var $index=$(this).index();
-                $(this).attr('href',https[$index2-1][$index]);
+                $(this).attr('href',[$index2-1][$index]);
 
             });
 
@@ -206,51 +205,62 @@
                 ////图片数组
                 var img2=['1','2','3','bg'];
                 var img3=['bing','bing2','sugar'];
-                var img=['hl','wx','br'];
+                var img=['hl','wx'];
                 var idx;
             function changeImg(num){
                 var arr=num;
                 var i=0;
                 idx=num.length;
-                $('.swiper-wrapper').children().remove();
-                $('.swiper-pagination').children().remove()
+                $('.swiper-wrapper').children('div').remove();
+                $('.swiper-pagination').children('span').remove();
                 for(;i<arr.length;i++){
                     $('.swiper-wrapper').append('<div class="swiper-slide weui-flex__items img"></div>');
-                    $('.swiper-pagination').append('<span class="swiper-pagination-bullet"></span>');
                     $('.swiper-wrapper').find('div').eq(i).css('background-image','url(images/'+arr[i]+'.jpg)');
-                };  
+                    $('.swiper-pagination').append('<span class="swiper-pagination-bullet"></span>');   
+                }; 
             };
-            changeImg(img);             
-            function swiperStart(){
+
+            function swiper(){
                 var mySwiper = new Swiper('.swiper-container', {
                 autoplay: true,//可选选项，自动滑动
                 pagination: {
                     el: '.swiper-pagination',
-                    clickable :true,
-                },              
+                    clickable :false,
+                },
+                observer:true,//修改swiper自己或子元素时，自动初始化swiper        
             });
-            $('.weui-navbar__item').click(function(){
-                var mySwiper = new Swiper('.swiper-container', {
-                autoplay: true,//可选选项，自动滑动
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable :true,
-                },              
-            });
-            })
             mySwiper.el.onmouseover = function(){
               mySwiper.autoplay.stop();
             };
             mySwiper.el.onmouseout = function(){
               mySwiper.autoplay.start();
             }
-            };
-            swiperStart();
-            $('.weui-article').click(
-                function(){
-                    //window.location.href="art1.html";
-                }
-            )
+            }
+            changeImg(img);             
+            swiper();    
+                
+            //     function swiperStart(){
+            //       var mySwiper = new Swiper('.swiper-container', {
+            //     autoplay: true,//可选选项，自动滑动
+            //     pagination: {
+            //         el: '.swiper-pagination',
+            //         clickable :true,
+            //     },
+            //     preloadImages:true,
+            //     observer:true,//修改swiper自己或子元素时，自动初始化swiper
+            //     observeParents:true,//修改swiper的父元素时，自动初始化swiper             
+            // });
+            //       mySwiper.updateSlidesSize();
+                         
+            //     }
+            // mySwiper.el.onmouseover = function(){
+            //   mySwiper.autoplay.stop();
+            // };
+            // mySwiper.el.onmouseout = function(){
+            //   mySwiper.autoplay.start();
+            // }
+            // };
+           // swiperStart();
 
         })
     </script>
