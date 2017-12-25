@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/viewer.css">
 </head>
 <body ontouchstart>
 <!-- head -->
@@ -19,12 +20,9 @@
 			<div class="weui-navbar__item pointer">当地特产</div>
 		</div>
 <!-- 图片轮播 -->			
-		<div class="swiper-container" style="padding-top:50px;overflow: hidden;">
+		<div class="swiper-container" style="padding-top:50px;">
 			  <div class="swiper-wrapper weui-flex">
-			    <div class="swiper-slide weui-flex__items img"></div>
-			    <div class="swiper-slide weui-flex__items img"></div>
-			    <div class="swiper-slide weui-flex__items img"></div>
-			  </div
+			  </div>
 			  <div class="swiper-pagination"></div>
 		</div>
 		<div class="weui-search-bar" id="searchBar">
@@ -43,24 +41,37 @@
         </div>
 		<!-- content panel-->
 		<div class="weui-tab__panel" id="panel1">
-        	<article class="weui-article">
-	            <h1>大标题</h1>
+        	<article class="weui-article" id="art1">
+	            <h1>厦门美食大全</h1>
 	            <section>
-	                <h2 class="title">章标题</h2>
+	                <h2 class="title"></h2>
 	                <section>
-	                    <h3>1.1 节标题</h3>
+	                    <h3></h3>
 	                    <p>
-	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	                        consequat.
+	                        沿着思明北到中山路一条巷子里的美食🥘
+
+发现闽南古早味
+
+这些地方一定要去，在厦门这么久可以说是厦门之最୧(๑•̀⌄•́๑)૭
+🍽
 	                    </p>
-	                    <p>
-	                        <img src="images/bg.jpg" alt="">
-	                        <img src="images/bg.jpg" alt="">
-	                    </p>
+	                    <div class="container">
+    <div id="galley">
+      <ul class="pictures">
+        <li><img data-original="images/1.jpg" src="images/thumbnails/1.jpg" alt="Cuo Na Lake" ></li>
+        <li><img data-original="images/2.jpg" src="images/thumbnails/2.jpg" alt="Tibetan Plateau"></li>
+        <li><img data-original="images/3.jpg" src="images/thumbnails/3.jpg" alt="Jokhang Temple"></li>
+        <li><img data-original="images/4.jpg" src="images/thumbnails/4.jpg" alt="Potala Palace 1"></li>
+        <li><img data-original="images/5.jpg" src="images/thumbnails/5.jpg" alt="Potala Palace 2"></li>
+        <li><img data-original="images/6.jpg" src="images/thumbnails/6.jpg" alt="Potala Palace 3"></li>
+        <li><img data-original="images/7.jpg" src="images/thumbnails/7.jpg" alt="Lhasa River"></li>
+        <li><img data-original="images/8.jpg" src="images/thumbnails/8.jpg" alt="Namtso 1"></li>
+        <li><img data-original="images/9.jpg" src="images/thumbnails/9.jpg" alt="Namtso 2"></li>
+      </ul>
+    </div>
+  </div>
 	                </section>
-	                <section>
+	             <!--    <section>
 	                    <h3>1.2 节标题</h3>
 	                    <p>
 	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -68,7 +79,7 @@
 	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	                    </p>
-	                </section>
+	                </section> -->
 	            </section>
 	        </article>
 	        <article class="weui-article">
@@ -88,7 +99,7 @@
 	                        <img src="images/bg.jpg" alt="">
 	                    </p>
 	                </section>
-	                <section>
+	            <!--     <section>
 	                    <h3>1.2 节标题</h3>
 	                    <p>
 	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -96,7 +107,7 @@
 	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	                    </p>
-	                </section>
+	                </section> -->
 	            </section>
 	        </article>
 	        <article class="weui-article">
@@ -116,7 +127,7 @@
 	                        <img src="images/bg.jpg" alt="">
 	                    </p>
 	                </section>
-	                <section>
+	        <!--         <section>
 	                    <h3>1.2 节标题</h3>
 	                    <p>
 	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -124,7 +135,7 @@
 	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	                    </p>
-	                </section>
+	                </section> -->
 	            </section>
 	        </article>
 	        <article class="weui-article">
@@ -144,7 +155,7 @@
 	                        <img src="images/bg.jpg" alt="">
 	                    </p>
 	                </section>
-	                <section>
+	             <!--    <section>
 	                    <h3>1.2 节标题</h3>
 	                    <p>
 	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -152,7 +163,7 @@
 	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	                    </p>
-	                </section>
+	                </section> -->
 	            </section>
 	        </article>
 		</div>
@@ -174,7 +185,7 @@
 	                        <img src="images/bg.jpg" alt="">
 	                    </p>
 	                </section>
-	                <section>
+	               <!--  <section>
 	                    <h3>1.2 节标题</h3>
 	                    <p>
 	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -182,7 +193,7 @@
 	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	                    </p>
-	                </section>
+	                </section> -->
 	            </section>
 	        </article>
 		</div>
@@ -204,7 +215,7 @@
 	                        <img src="images/bg.jpg" alt="">
 	                    </p>
 	                </section>
-	                <section>
+	         <!--        <section>
 	                    <h3>1.2 节标题</h3>
 	                    <p>
 	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -212,7 +223,7 @@
 	                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	                    </p>
-	                </section>
+	                </section> -->
 	            </section>
 	        </article>
 		</div>
@@ -220,12 +231,13 @@
 	<div class="weui-ft">
 		
 	</div>
-		<script type="text/javascript" src="js/zepto.js"></script>
-		<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
-		<script type="text/javascript" src="js/weui.min.js"></script>
-		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-		<script type="text/javascript" src="js/swiper.min.js"></script>
-		  <script type="text/javascript">
+<script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/weui.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script src="js/viewer.js"></script>
+<script type="text/javascript">
     $(function(){
         var $searchBar = $('#searchBar'),
             $searchResult = $('#searchResult'),
@@ -272,6 +284,8 @@
 </script>
 		<script type="text/javascript">
 		$(function(){
+			 var viewer = new Viewer(document.getElementById('dowebok'));
+			 viewer.navbar=false;
 			//panel切换
 			$('.weui-tab__panel').eq(0).show().siblings('.weui-tab__panel').hide();
 			$('.weui-navbar__item').on("click",function(){
@@ -280,52 +294,100 @@
 			$('.weui-tab__panel').eq($index).show().siblings('.weui-tab__panel').hide();
 			switch($index){
 				case 0:
-				changeImg(img)
+				changeImg(img);
+				
 				break;
 				case 1:
 				changeImg(img2);
+				swiperStart()
 				break;
 				case 2:
 				changeImg(img3);
+
 				break;
 			}
 			});
 
-			$('.weui-tab__panel a').click(function(){
-				var $index2=$(this).parent().parent().index();
-				//alert($index2)
-				var $index=$(this).index();
-				$(this).attr('href',https[$index2-1][$index]);
+			// $('.weui-tab__panel a').click(function(){
+			// 	var $index2=$(this).parent().parent().index();
+			// 	//alert($index2)
+			// 	var $index=$(this).index();
+			// 	$(this).attr('href',https[$index2-1][$index]);
 
-			});
+			// });
 
 			//改变轮播图片
 				////图片数组
-				var img2=['1','2','3'];
+				var img2=['1','2','3','bg'];
 				var img3=['bing','bing2','sugar'];
 				var img=['hl','wx','br'];
+				var idx;
 			function changeImg(num){
 				var arr=num;
-				for(var i=0;i<arr.length;i++){
+				var i=0;
+				idx=num.length;
+				$('.swiper-wrapper').children().remove();
+				$('.swiper-pagination').children().remove()
+				for(;i<arr.length;i++){
+					$('.swiper-wrapper').append('<div class="swiper-slide weui-flex__items img"></div>');
+					$('.swiper-pagination').append('<span class="swiper-pagination-bullet"></span>');
 					$('.swiper-wrapper').find('div').eq(i).css('background-image','url(images/'+arr[i]+'.jpg)');
-				}
-				$('.swiper-wrapper').children().addClass('img');
+				};	
 			};
-			changeImg(img);
-			var mySwiper = new Swiper('.swiper-container', {
+			changeImg(img);				
+			function swiperStart(){
+				var mySwiper = new Swiper('.swiper-container', {
 				autoplay: true,//可选选项，自动滑动
 				pagination: {
 				    el: '.swiper-pagination',
-				    clickable :false,
-				},
+				    clickable :true,
+				},				
 			});
-			// mySwiper.el.onmouseover = function(){
-			//   mySwiper.autoplay.stop();
-			// };
-			// mySwiper.el.onmouseout = function(){
-			//   mySwiper.autoplay.start();
-			// }
+			$('.weui-navbar__item').click(function(){
+				var mySwiper = new Swiper('.swiper-container', {
+				autoplay: true,//可选选项，自动滑动
+				pagination: {
+				    el: '.swiper-pagination',
+				    clickable :true,
+				},				
+			});
+			})
+			mySwiper.el.onmouseover = function(){
+			  mySwiper.autoplay.stop();
+			};
+			mySwiper.el.onmouseout = function(){
+			  mySwiper.autoplay.start();
+			}
+			};
+			swiperStart();
+			$('.weui-article').click(
+				function(){
+					//window.location.href="art1.html";
+				}
+			)
+
 		})
 	</script>
+	<script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var galley = document.getElementById('galley');
+      var viewer = new Viewer(galley, {
+        url: 'data-original',
+        toolbar: {
+          oneToOne: false,
+          prev: function() {
+            viewer.prev(false);
+          },
+          play: false,
+          next: function() {
+            viewer.next(false);
+          },
+          download: false,
+        },
+        navbar:false,
+        title:false,
+      });
+    });
+  </script>
 </body>
 </html>

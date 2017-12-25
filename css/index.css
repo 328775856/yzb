@@ -1,6 +1,9 @@
-	h1{
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		h1{
 			text-align: center;
-			margin-top: 30px;
 		}
 		.gray{
 			color: gray;
@@ -59,4 +62,28 @@
 	background-repeat: no-repeat;
 	height: 300px;
 	background-size: 100% 100%;
+}
+.weui-article:hover{
+	margin: 1px;
+	border:1px solid pink;
+}
+.weui-grid{
+	padding: 0;
+	margin: 0;
+}
+.weui-grid img{
+	padding: 0;
+	margin: 0;
+}
+.pictures{
+	list-style: none;
+	display: flex;
+	width: 100%;
+	flex-flow: row wrap;
+}
+.pictures li{
+  float:left;
+  padding:20px 10px;
+  width:33.33333333%;
+  box-sizing:border-box;
 }
