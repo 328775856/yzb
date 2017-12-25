@@ -63,7 +63,7 @@
 	height: 300px;
 	background-size: 100% 100%;
 }
-.weui-article:hover{
+.weui-article{
 	margin: 1px;
 	border:1px solid pink;
 }

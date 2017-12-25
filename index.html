@@ -58,15 +58,13 @@
 	                    <div class="container">
     <div id="galley">
       <ul class="pictures">
-        <li><img data-original="images/1.jpg" src="images/thumbnails/1.jpg" alt="Cuo Na Lake" ></li>
-        <li><img data-original="images/2.jpg" src="images/thumbnails/2.jpg" alt="Tibetan Plateau"></li>
-        <li><img data-original="images/3.jpg" src="images/thumbnails/3.jpg" alt="Jokhang Temple"></li>
-        <li><img data-original="images/4.jpg" src="images/thumbnails/4.jpg" alt="Potala Palace 1"></li>
-        <li><img data-original="images/5.jpg" src="images/thumbnails/5.jpg" alt="Potala Palace 2"></li>
-        <li><img data-original="images/6.jpg" src="images/thumbnails/6.jpg" alt="Potala Palace 3"></li>
-        <li><img data-original="images/7.jpg" src="images/thumbnails/7.jpg" alt="Lhasa River"></li>
-        <li><img data-original="images/8.jpg" src="images/thumbnails/8.jpg" alt="Namtso 1"></li>
-        <li><img data-original="images/9.jpg" src="images/thumbnails/9.jpg" alt="Namtso 2"></li>
+        <li><img data-original="images/1-1.jpg" src="images/thumbnails/1-1.jpg" alt="Cuo Na Lake" ></li>
+        <li><img data-original="images/1-2.jpg" src="images/thumbnails/1-2.jpg" alt="Tibetan Plateau"></li>
+        <li><img data-original="images/1-3.jpg" src="images/thumbnails/1-3.jpg" alt="Jokhang Temple"></li>
+        <li><img data-original="images/1-4.jpg" src="images/thumbnails/1-4.jpg" alt="Potala Palace 1"></li>
+        <li><img data-original="images/1-5.jpg" src="images/thumbnails/1-5.jpg" alt="Potala Palace 2"></li>
+        <li><img data-original="images/1-6.jpg" src="images/thumbnails/1-6.jpg" alt="Potala Palace 3"></li>
+        <li><img data-original="images/1-7.jpg" src="images/thumbnails/1-7.jpg" alt="Lhasa River"></li>
       </ul>
     </div>
   </div>
@@ -284,8 +282,6 @@
 </script>
 		<script type="text/javascript">
 		$(function(){
-			 var viewer = new Viewer(document.getElementById('dowebok'));
-			 viewer.navbar=false;
 			//panel切换
 			$('.weui-tab__panel').eq(0).show().siblings('.weui-tab__panel').hide();
 			$('.weui-navbar__item').on("click",function(){
@@ -308,13 +304,13 @@
 			}
 			});
 
-			// $('.weui-tab__panel a').click(function(){
-			// 	var $index2=$(this).parent().parent().index();
-			// 	//alert($index2)
-			// 	var $index=$(this).index();
-			// 	$(this).attr('href',https[$index2-1][$index]);
+			$('.weui-tab__panel a').click(function(){
+				var $index2=$(this).parent().parent().index();
+				//alert($index2)
+				var $index=$(this).index();
+				$(this).attr('href',https[$index2-1][$index]);
 
-			// });
+			});
 
 			//改变轮播图片
 				////图片数组
@@ -374,7 +370,6 @@
       var viewer = new Viewer(galley, {
         url: 'data-original',
         toolbar: {
-          oneToOne: false,
           prev: function() {
             viewer.prev(false);
           },
