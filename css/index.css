@@ -88,5 +88,17 @@
 }
 #panel3 div{
 	width: 49%;
-	border: 1px solid black;
+	height: auto;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	text-align: center;
+	margin: 1px;
+}
+#panel3 div img{
+	width: 100%;
+}
+.div1{
+	background-image: url(../images/img/xmtc/1.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
 }

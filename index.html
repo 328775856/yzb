@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport">
@@ -98,25 +98,25 @@
 	                    <p>到厦门享受温暖冬日阳光</p>
 	                </div>
 	                <div class="weui-cell__ft"></div>
-	            </a>
+	            </a> 
 	        </div>
         </div>
         <div class="weui-tab__panel" id="panel3">
-        	<div>
-				<div>img</div>
-				<p></p>	
-        	</div>
-        	<div>2</div>
-        	<div>3</div>
-        	<div>4</div>
-        	<div>5</div>	
-        	<div>6</div>
-        	<div>7</div>
-        	<div>8</div>
+        	<div><img  src='images/img/xmtc/1.jpg'/><p>牛轧糖</p></div>
+        	<div><img  src='images/img/xmtc/2.jpg'/><p>伊豆饼</p></div>
+        	<div><img  src='images/img/xmtc/3.jpg'/><p>椰子饼</p></div>
+            <div><img  src='images/img/xmtc/4.jpg'/><p>猪肉脯</p></div>
+            <div><img  src='images/img/xmtc/5.jpg'/><p>素饼</p></div>
+            <div><img  src='images/img/xmtc/6.jpg'/><p>旺来酥</p></div>
+            <div><img  src='images/img/xmtc/7.jpg'/><p>绿豆馅饼</p></div>
+            <div><img  src='images/img/xmtc/8.jpg'/><p>同安封肉</p></div>
         </div>
     </div>
-    <div class="weui-ft">
-        
+    <div class="weui-footer">
+        <p class="weui-footer__links">
+            <a href="javascript:void(0);" class="weui-footer__link">厦门游中宝</a>
+        </p>
+        <p class="weui-footer__text">Copyright &copy; 2008-2016 xm.yzb</p>
     </div>
 <script type="text/javascript" src="js/zepto.js"></script>
 <script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
@@ -193,13 +193,13 @@
             }
             });
 
-            $('.weui-tab__panel a').click(function(){
-                var $index2=$(this).parent().parent().index();
-                //alert($index2)
-                var $index=$(this).index();
-                $(this).attr('href',[$index2-1][$index]);
+            // $('.weui-tab__panel a').click(function(){
+            //     var $index2=$(this).parent().parent().index();
+            //     //alert($index2)
+            //     var $index=$(this).index();
+            //     $(this).attr('href',[$index2-1][$index]);
 
-            });
+            // });
 
             //改变轮播图片
                 ////图片数组
