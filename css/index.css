@@ -87,12 +87,12 @@
 	flex-flow: row wrap;
 }
 #panel3 div{
-	width: 49%;
+	width: 48%;
 	height: auto;
-	border: 1px solid #ccc;
+	border: 1% solid #ccc;
 	border-radius: 5px;
 	text-align: center;
-	margin: 1px;
+	margin: 1%;
 }
 #panel3 div img{
 	width: 100%;
