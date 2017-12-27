@@ -75,12 +75,14 @@
 	flex-flow: row wrap;
 }
 .example li{
-  width:33.33333333%;
+  width:32.6%;
   box-sizing:border-box;
+	border: 3px solid orange;
+	margin: 0.3333%;
 }
 .example img{
-	margin: 0;
-	padding: 0;
+	width: 100%;
+	z-index:1500;
 }
 #panel3{
 	display: flex;
@@ -101,4 +103,11 @@
 	background-image: url(../images/img/xmtc/1.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+.swiper-slide{
+	width: 48%;
+}
+.swiper-slide img{
+	width: 100px；
+	height:100%;
 }
