@@ -19,13 +19,13 @@ var DEFAULTS = {
   inline: false,
 
   // Show the button on the top-right of the viewer
-  button: true,
+  button: false,
 
   // Show the navbar
   navbar: true,
 
   // Show the title
-  title: true,
+  title: false,
 
   // Show the toolbar
   toolbar: true,
@@ -34,10 +34,10 @@ var DEFAULTS = {
   tooltip: true,
 
   // Enable to move the image
-  movable: true,
+  movable: false,
 
   // Enable to zoom the image
-  zoomable: true,
+  zoomable: false,
 
   // Enable to rotate the image
   rotatable: true,

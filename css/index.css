@@ -68,22 +68,6 @@
 	border:1px solid pink;
 	border-bottom: 0;
 }
-.example{
-	list-style: none;
-	display: flex;
-	width: 100%;
-	flex-flow: row wrap;
-}
-.example li{
-  width:32.6%;
-  box-sizing:border-box;
-	border: 3px solid orange;
-	margin: 0.3333%;
-}
-.example img{
-	width: 100%;
-	z-index:1500;
-}
 #panel3{
 	display: flex;
 	flex-flow: row wrap;
@@ -110,4 +94,33 @@
 .swiper-slide img{
 	width: 100px；
 	height:100%;
+}
+.pictures {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.pictures > li {
+	width: 31.5%;
+	margin: 1px;
+	overflow: hidden;
+	border: 1px solid orange;
+}
+.pictures > li > img {
+	width: 100%;
+	cursor: -webkit-zoom-in;
+	cursor: zoom-in;
+}
+.viewer-download {
+	color: #fff;
+	font-family: FontAwesome;
+	font-size: .75rem;
+	line-height: 1.5rem;
+	text-align: center;
+}
+.viewer-download::before {
+	content: "\f019";
 }
