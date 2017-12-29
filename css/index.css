@@ -73,12 +73,11 @@
 	flex-flow: row wrap;
 }
 #panel3 div{
-	width: 48%;
+	width: 47%;
 	height: auto;
-	border: 1% solid #ccc;
-	border-radius: 5px;
+	border: 1px solid orange;
 	text-align: center;
-	margin: 1%;
+	margin: 1px;
 }
 #panel3 div img{
 	width: 100%;
@@ -88,13 +87,7 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 }
-.swiper-slide{
-	width: 48%;
-}
-.swiper-slide img{
-	width: 100px；
-	height:100%;
-}
+
 .pictures {
 	width: 100%;
 	display: flex;
@@ -105,6 +98,7 @@
 }
 .pictures > li {
 	width: 31.5%;
+	height: 100px;
 	margin: 1px;
 	overflow: hidden;
 	border: 1px solid orange;
@@ -114,13 +108,21 @@
 	cursor: -webkit-zoom-in;
 	cursor: zoom-in;
 }
-.viewer-download {
-	color: #fff;
-	font-family: FontAwesome;
-	font-size: .75rem;
-	line-height: 1.5rem;
-	text-align: center;
+#panel1 p:before{
+	 content:"✈________";
+
+background-color:lightblue;
+
+color:white;
+
+font-weight:bold;
 }
-.viewer-download::before {
-	content: "\f019";
+#panel1 p:after{
+	 content:"✈";
+
+background-color:lightblue;
+
+color:white;
+
+font-weight:bold;
 }
