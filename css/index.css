@@ -1,128 +1,192 @@
-		*{
-			margin: 0;
-			padding: 0;
+		* {
+		    margin: 0;
+		    padding: 0;
 		}
-		h1{
-			text-align: center;
-		}
-		.gray{
-			color: gray;
-		}
-		a:hover{
-			background: #ddd;
-		}
-		.pointer{
-			cursor:pointer;
-		}
-		.weui-navbar + .weui-tab__panel+.weui-tab__panel{
-		  padding-top:50px;
-		  padding-bottom:0;
-		}
-		.weui-navbar + .weui-tab__panel+.weui-tab__panel+.weui-tab__panel{
-		  padding-top:50px;
-		  padding-bottom:0;
-		}
-		.green{
-			color: #32CD32;
-		}
-		.red{
-			color: red;
-		}
-		.blue{
-			color: #00CED1;
-		}
-		.orange{
-			color: orange;
-		}
-		.silve{
-			color: #FCFCFC;
-		}
-		.black{
-			color: black;
-		}
-		.gold{
-			color:#EEAD0E;
-		}
-		.car{
-			color: #CD3700;
-		}
-		.train{
-			color:#006400;
-		}
-		.buy{
-			color:#CD5555;
-		}
-		.lightblue{
-			color: #836FFF;
-		}
-		.bgorange{
-			background: white;
-		}
-.img{
-	background-repeat: no-repeat;
-	height: 300px;
-	background-size: 100% 100%;
-}
-.weui-article{
-	margin: 1px;
-	border:1px solid pink;
-	border-bottom: 0;
-}
-#panel3{
-	display: flex;
-	flex-flow: row wrap;
-}
-#panel3 div{
-	width: 47%;
-	height: auto;
-	border: 1px solid orange;
-	text-align: center;
-	margin: 1px;
-}
-#panel3 div img{
-	width: 100%;
-}
-.div1{
-	background-image: url(../images/img/xmtc/1.jpg);
-	background-repeat: no-repeat;
-	background-size: contain;
-}
 
-.pictures {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.pictures > li {
-	width: 31.5%;
-	height: 100px;
-	margin: 1px;
-	overflow: hidden;
-	border: 1px solid orange;
-}
-.pictures > li > img {
-	width: 100%;
-	cursor: -webkit-zoom-in;
-	cursor: zoom-in;
-}
-#panel1 p:before{
-	 content:"✈________";
+		h1 {
+		    text-align: center;
+		}
 
-background-color:lightblue;
+		.weui-navbar {
+		    position: fixed;
+		}
 
-color:white;
+		.gray {
+		    color: gray;
+		}
 
-font-weight:bold;
-}
-#panel1 p:after{
-	 content:"✈";
+		a:hover {
+		    background: #ddd;
+		}
 
-background-color:lightblue;
+		.pointer {
+		    cursor: pointer;
+		}
 
-color:white;
+		.weui-navbar+.weui-tab__panel+.weui-tab__panel {
+		    padding-top: 50px;
+		    padding-bottom: 0;
+		}
 
-font-weight:bold;
-}
+		.weui-navbar+.weui-tab__panel+.weui-tab__panel+.weui-tab__panel {
+		    padding-top: 50px;
+		    padding-bottom: 0;
+		}
+
+		.green {
+		    color: #32CD32;
+		}
+
+		.red {
+		    color: red;
+		}
+
+		.blue {
+		    color: #00CED1;
+		}
+
+		.orange {
+		    color: orange;
+		}
+
+		.silve {
+		    color: #FCFCFC;
+		}
+
+		.black {
+		    color: black;
+		}
+
+		.gold {
+		    color: #EEAD0E;
+		}
+
+		.car {
+		    color: #CD3700;
+		}
+
+		.train {
+		    color: #006400;
+		}
+
+		.buy {
+		    color: #CD5555;
+		}
+
+		.lightblue {
+		    color: #836FFF;
+		}
+
+		.bgorange {
+		    background: white;
+		}
+
+		.img {
+		    background-repeat: no-repeat;
+		    height: 300px;
+		    background-size: 100% 100%;
+		}
+
+		.weui-article {
+		    margin: 1px;
+		    border: 1px solid pink;
+		    border-bottom: 0;
+		}
+
+		#panel3 {
+		    display: flex;
+		    flex-flow: row wrap;
+		}
+
+		#panel3 div {
+		    width: 47%;
+		    height: auto;
+		    border: 1px solid orange;
+		    text-align: center;
+		    margin: 1px;
+		}
+
+		#panel3 div img {
+		    width: 100%;
+		}
+
+		.div1 {
+		    background-image: url(../images/img/xmtc/1.jpg);
+		    background-repeat: no-repeat;
+		    background-size: contain;
+		}
+
+		.pictures {
+		    width: 100%;
+		    display: flex;
+		    flex-flow: row wrap;
+		    margin: 0;
+		    padding: 0;
+		    list-style: none;
+		}
+
+		.pictures>li {
+		    width: 31.5%;
+		    height: 100px;
+		    margin: 1px;
+		    overflow: hidden;
+		    border: 1px solid orange;
+		}
+
+		.pictures>li>img {
+		    width: 100%;
+		    cursor: -webkit-zoom-in;
+		    cursor: zoom-in;
+		}
+
+		#panel1 p:before {
+		    content: "✈________";
+
+		    background-color: lightblue;
+
+		    color: white;
+
+		    font-weight: bold;
+		}
+
+		#panel1 p:after {
+		    content: "✈";
+
+		    background-color: lightblue;
+
+		    color: white;
+
+		    font-weight: bold;
+		}
+
+		#panel1 h3 {
+		    text-align: center;
+		    border-bottom: 5px solid orange;
+		    margin: 20px 0px;
+		}
+
+		#panel1 p {
+		    margin: 20px 0px;
+		}
+
+		.weui-footer {
+		    border-top: 1px solid orange;
+		    margin: 20px 0;
+		}
+
+		.weui-footer>a {
+		    font-size: 20px;
+		    font-weight: bold;
+		}
+
+		#dshow span {
+		    display: block;
+		    position: absolute;
+		    left: 90%;
+		    top: 0;
+		    z-index: 5001;
+		    padding: 5px 5px;
+		    background: #F0F0F0;
+		    color: #7EC0EE;
+		    cursor: pointer;
+		}
