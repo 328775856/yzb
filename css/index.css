@@ -182,11 +182,15 @@
 		#dshow span {
 		    display: block;
 		    position: absolute;
-		    left: 90%;
+		    left: 96%;
 		    top: 0;
-		    z-index: 5001;
-		    padding: 5px 5px;
-		    background: #F0F0F0;
-		    color: #7EC0EE;
 		    cursor: pointer;
+		    padding: 0;
+		    margin: 0;
+		}
+		#dshow span img{
+		    width: 15px;
+		    height: 15px;
+		    position: absolute;
+		    z-index: 9999999;
 		}
