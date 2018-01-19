@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<title>倒计时</title>
+</head>
+<style>
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body,div{
+	margin:0;
+	padding:0;
+}
+.bg{
+	width:100%;
+	height: 100%;
+	background: url(images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+}
+.wrap{
+	position: relative;
+	width: 46px;
+	height: 46px;
+	top: 4%;
+	left: 80%;
+	background: #fff;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.box{
+	position: absolute;
+	top:7px;
+	left:7px;
+	width: 34px;
+	height: 34px;
+	line-height: 17px;
+	font-size: 12px;
+	color:#333;		
+	text-align: center;
+	z-index: 4;
+	background: #fff;
+	border-radius: 50%;
+}
+.top,.bottom{
+	position: absolute;
+	top:0;
+	left:0;	
+	width: 42px;
+	height: 42px;
+	border: 2px solid #129aee;
+	border-radius: 50%;
+}
+.top{
+	z-index: 1;
+	clip:rect(0px,46px,23px,0px);
+	-webkit-clip:rect(0px,46px,23px,0px);
+}
+.bottom{
+	z-index: 2;
+	clip:rect(23px,46px,46px,0px);
+	-webkit-clip:rect(23px,46px,46px,0px);
+}
+.mask{
+	position: absolute;
+	top:0;
+	left:0;
+	width:46px;
+	height: 46px;
+	z-index: 3;
+	display: none;
+	background: #fff;
+	clip:rect(23px,46px,46px,0px);
+	-webkit-clip:rect(23px,46px,46px,0px);
+}
+</style>
+<body>
+<div class="bg" id="bg">
+	<div class="wrap" id="wrap">
+		<div class="box" id="box" onclick="location.href='index.html'">跳过广告</div>
+		<div class="top" id="top"></div>
+		<div class="bottom" id="bottom"></div>
+		<div class="mask" id="mask"></div>	
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	var time = 2000;//2秒转完	
+	var bottom = document.getElementById('bottom');
+	var mask = document.getElementById('mask');
+	var wrap = document.getElementById('wrap');
+	var box = document.getElementById('box');
+	var deg = 0;
+	var num = 0;//只转一次
+		window.onload=function(){
+			rotating();
+		}
+	function rotating(){
+		var top = document.getElementById('top');
+		setTimeout(function(){
+			deg++;
+			if(deg == 180){
+				top.style.display = 'none';
+				mask.style.display = 'block';
+			}
+			if(deg == 361){
+				return;
+			}else{
+				setTimeout(rotating(),time/360)
+			}
+			bottom.style.transform = "rotate(" +deg+ "deg)";
+			bottom.style.WebkitTransform = "rotate(" +deg+ "deg)";
+		}, time/360);
+		if(deg==360){
+			location.href='index.html';
+			box.innerHTML='进入主页';
+			box.style.color='white';
+			wrap.style.background='lightblue';
+			mask.style.background='lightblue';
+			box.style.background='lightblue';
+		};	
+	}
+</script>

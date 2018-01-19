@@ -11,6 +11,56 @@
 		    position: fixed;
 		}
 
+		.swiper-button-next {
+		    position: absolute;
+		    top: 50%;
+		    right: 0px;
+		    width: 40px;
+		    height: 40px;
+		    margin-top: -22px;
+		    padding: 10px 0;
+		    z-index: 10;
+		    cursor: pointer;
+		    background-size: 40px 40px;
+		    background-position: center;
+		    background-repeat: no-repeat;
+			cursor:pointer; 
+			background-color: rgba(120,120,120,.3);
+		}
+
+		.swiper-button-prev {
+		    position: absolute;
+		    top: 50%;
+		    left: 0px;
+		    width: 40px;
+		    height: 40px;
+		    margin-top: -22px;
+		    padding: 10px 0;
+		    z-index: 10;
+		    cursor: pointer;
+		    background-size: 40px 40px;
+		    background-position: center;
+		    background-repeat: no-repeat;
+			cursor:pointer;  
+			background-color: rgba(120,120,120,.3);
+		}
+		
+		#swiper-container1 {
+        width: 100%;
+     	height: 300px;
+	    }
+	    .swiper-container .swiper-slide {
+	        font-size: 18px;
+	        height: auto;
+	        -webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	        padding:0 10px;
+	    }
+
+		.swiper-button-disable {
+		    pointer-events: auto;
+		}
+		
 		.gray {
 		    color: gray;
 		}
@@ -24,12 +74,12 @@
 		}
 
 		.weui-navbar+.weui-tab__panel+.weui-tab__panel {
-		    padding-top: 50px;
+		    margin-top: 50px;
 		    padding-bottom: 0;
 		}
 
 		.weui-navbar+.weui-tab__panel+.weui-tab__panel+.weui-tab__panel {
-		    padding-top: 50px;
+		    margin-top: 50px;
 		    padding-bottom: 0;
 		}
 
@@ -81,6 +131,52 @@
 		    background: white;
 		}
 
+		#dshow {
+		    width: 100%;
+		 	height: 100%;
+		    background: rgba(0, 0, 0, 1);
+		    position: fixed;
+		    z-index: -1;
+		    opacity: 0;
+		}
+
+		#dshow span {
+		    display: block;
+		    position: fixed;
+		    left: 95%;
+		    top: 0;
+		    cursor: pointer;
+		}
+
+		#dshow span img {
+		    width: 18px;
+		    height: 18px;
+		    position: absolute;
+		    margin: 0;
+		}
+
+
+		#swiper-container2,#swiper-container3 {
+		    position: relative;
+		    z-index: 5001;
+		    width: 100%;
+		    height: 100%; 
+		}
+
+		#float {
+		    position: absolute;
+		    top: 50px;
+		    width: 100%;
+		    height: 300px;
+		    z-index: 1000;
+		    display: none;
+		    border: 0px solid black;
+		    text-align: center;
+		    background-image: url(../images/logo_last3.jpg);
+		    background-size: 100% 100%;
+		    background-repeat: no-repeat;
+		}
+
 		.img {
 		    background-repeat: no-repeat;
 		    height: 300px;
@@ -91,25 +187,6 @@
 		    margin: 1px;
 		    border: 1px solid pink;
 		    border-bottom: 0;
-		}
-
-		#panel3 {
-		    display: flex;
-		    flex-flow: row wrap;
-		}
-
-		#panel3 div {
-		    width: 45%;
-		    height: auto;
-		    border: 1px solid orange;
-		    text-align: center;
-		    margin: 6px;
-		    border-radius: 10%;
-		    overflow: hidden;
-		}
-
-		#panel3 div img {
-		    width: 100%;
 		}
 
 		.div1 {
@@ -127,22 +204,23 @@
 		    list-style: none;
 		}
 
-		.pictures>li {
+/*		.pictures>li {
 		    width: 31.5%;
 		    height: 100px;
 		    margin: 1px;
 		    overflow: hidden;
 		    border: 1px solid orange;
-		}
+		}*/
 
-		.pictures>li>img {
+		.pictures>img {
 		    width: 100%;
+		    height: auto;
 		    cursor: -webkit-zoom-in;
 		    cursor: zoom-in;
 		}
 
 		#panel1 p:before {
-		    content: "✈________";
+		    content: "✈_____";
 
 		    background-color: lightblue;
 
@@ -151,7 +229,7 @@
 		    font-weight: bold;
 		}
 
-		#panel1 p:after {
+	/*	#panel1 p:after {
 		    content: "✈";
 
 		    background-color: lightblue;
@@ -159,6 +237,11 @@
 		    color: white;
 
 		    font-weight: bold;
+		}*/
+
+		#panel1 {
+		    width: 90%;
+		    margin: 0 auto;
 		}
 
 		#panel1 h3 {
@@ -168,7 +251,9 @@
 		}
 
 		#panel1 p {
-		    margin: 20px 0px;
+		    background-color: #edededb3;
+		    height: 100px;
+		    font-size: 14px;
 		}
 
 		.weui-footer {
@@ -181,39 +266,27 @@
 		    font-weight: bold;
 		}
 
-		.swiper-container2{
-			position: absolute;
-			z-index: 5001;
-			width: 90%;
-			height:90%;
-			left: 5%;
+		#panel3 {
+		    display: flex;
+		    flex-flow: row wrap;
 		}
 
-		#dshow {
+		#panel3 div {
+		    width: 45%;
+		    height: auto;
+		    border: 0px solid orange;
+		    text-align: center;
+		    margin: 6px;
+		    background: orange;
+		    overflow: hidden;
+		    color: white;
+		}
+
+		#panel3 div img {
 		    width: 100%;
-		    height: 100%;
-		    background: rgba(0, 0, 0, .5);
-		    position: fixed;
-		    z-index: 5000;
-		    margin: 0;
-		    padding: 20px 0;
-		    overflow-y: scroll;
 		}
 
-		#dshow span {
-		    display: block;
-		    position: absolute;
-		    left: 95%;
-		    top: 0;
-		    cursor: pointer;
-		    padding: 0;
-		    margin: 0;
+		#panel3 p {
+		    width: 100%;
 		}
 
-		#dshow span img {
-		    width: 18px;
-		    height: 18px;
-		    position: absolute;
-		    z-index: 9999999;
-		    margin: 20px 0;
-		}

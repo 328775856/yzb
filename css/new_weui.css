@@ -1202,11 +1202,11 @@ button.weui-vcode-btn{
   text-align:center;
   -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 }
-/*.weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon,
+.weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon,
 .weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon > i,
 .weui-tabbar__item.weui-bar__item_on .weui-tabbar__label{
   color:#09BB07;
-}*/
+}
 .weui-tabbar__icon{
   display:inline-block;
   width:27px;
@@ -1270,7 +1270,8 @@ i.weui-tabbar__icon,
   background-color:#EDEDED;
 }
 .weui-navbar__item.weui-bar__item_on{
-  background-color:#EAEAEA;
+  background-color: #F5A06B;
+  color: white;
 }
 .weui-navbar__item:after{
   content:" ";
@@ -1587,6 +1588,8 @@ a.weui-media-box:active{
   color:#999999;
   font-size:14px;
   text-align:center;
+  position:relative;
+  z-index: 22;
 }
 .weui-footer a{
   color:#586C94;
